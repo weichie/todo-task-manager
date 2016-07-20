@@ -1,0 +1,61 @@
+/* VARIABLES 
+======================== */
+$green: 		#63c278;
+$orange: 		#ffc483;
+$blue: 			#6ecbdc;
+$red: 			#ff6c5d;
+$purple: 		#9f7fff;
+
+$bg: 			#ffffff;
+$dark-txt: 		#565055;
+$stripe: 		#f7f7f7;
+$light-txt: 	#c0c7d2;
+
+$font: 			'Open Sans', sans-serif;
+$font-size: 	1.1em;
+
+/* MIXIN 
+======================== */
+@mixin transition($x){
+	-webkit-transition: all $x ease;
+	-moz-transition: all $x ease;
+	-ms-transition: all $x ease;
+	-o-transition: all $x ease;
+	transition: all $x ease;
+}
+@mixin translate($x, $y){
+	-webkit-transform: translate($x, $y);
+	-moz-transform: translate($x, $y);
+	-ms-transform: translate($x, $y);
+	-o-transform: translate($x, $y);
+	transform: translate($x, $y);
+}
+@mixin border-radius($x){
+	-webkit-border-radius: $x;
+	-moz-border-radius: $x;
+	-ms-border-radius: $x;
+	-o-border-radius: $x;
+	border-radius: $x;
+}
+
+/* MAIN 
+======================== */
+body{
+	font-size: $font-size;
+	font-family: $font;
+}
+
+/* HEADER 
+======================== */
+
+/* CONTENT 
+======================== */
+
+/* FOOTER 
+======================== */
+
+/* RESPONSIVE 
+======================== */
+
+/* ANIMATION 
+======================== */
