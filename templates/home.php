@@ -7,5 +7,13 @@
 		<header class="flexbox">
 			<?php include_once('navbar.php'); ?>
 		</header>
+		<div class="flexbox">
+			<div class="list">
+				<?php include_once('list.php'); ?>
+			</div><!-- ./list -->
+			<div class="members">
+
+			</div><!-- ./members -->
+		</div><!-- ./app -->
 	</div><!-- ./content -->
 </div><!-- ./page -->
