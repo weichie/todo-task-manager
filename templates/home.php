@@ -4,6 +4,8 @@
 	</div><!-- ./sidebar -->
 	
 	<div class="content">
-
+		<header class="flexbox">
+			<?php include_once('navbar.php'); ?>
+		</header>
 	</div><!-- ./content -->
 </div><!-- ./page -->

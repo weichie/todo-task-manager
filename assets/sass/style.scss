@@ -6,6 +6,7 @@ $blue: 			#6ecbdc;
 $red: 			#ff6c5d;
 $purple: 		#9f7fff;
 
+$grey: 			#8c98a8;
 $bg: 			#ffffff;
 $dark-txt: 		#565055;
 $stripe: 		#f7f7f7;
@@ -65,8 +66,59 @@ body{
 .red		{color:$red;}
 .purple 	{color:$purple;}
 
+.green-btn{
+	background: $green;
+	color: #fff;
+}
+
 /* HEADER 
 ======================== */
+header{
+	padding: 10px 20px;
+	font-size: 1.2em;
+	border-bottom: 1px solid $stripe;
+
+	.date{
+		padding-top: 15px;
+		width: 40%;
+		font-weight: 300;
+
+		i{
+			color: $green;
+			margin-right: 10px;
+		}
+		span{
+			color: $grey;
+		}
+	}
+
+	.logs{
+		width: 60%;
+
+		ul{
+			margin-top: 8px;
+			padding: 0;
+			list-style-type: none;
+			justify-content: flex-end;
+
+			li{
+				&:first-child{
+					padding-top: 6px;
+					margin-right: 25px;
+					span{
+						background: $red;
+						color: #fff;
+						padding: 3px 8px;
+						@include border-radius(50%);
+					}
+					i{
+						color: $grey;
+					}
+				}
+			}
+		}
+	}
+}
 
 /* SIDEBAR 
 ======================== */
@@ -103,7 +155,6 @@ body{
 
 .menu{
 	margin-top: 20px;
-	border: 1px solid #000;
 
 	a{
 		color: $dark-txt;
@@ -144,14 +195,14 @@ body{
 	background: $bg;
 	height: 100%;
 	width: 20%;
-	border-right: 1px solid $light-txt;
+	border-right: 1px solid $stripe;
 }
 .content{
 	background: $bg;
 	margin-left: 20%;
 	width: 80%;
-	border: 1px solid red;
 }
+
 /* FOOTER 
 ======================== */
 

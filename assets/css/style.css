@@ -44,8 +44,57 @@ body {
   color: #9f7fff;
 }
 
+.green-btn {
+  background: #63c278;
+  color: #fff;
+}
+
 /* HEADER 
 ======================== */
+header {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-bottom: 1px solid #f7f7f7;
+}
+header .date {
+  padding-top: 15px;
+  width: 40%;
+  font-weight: 300;
+}
+header .date i {
+  color: #63c278;
+  margin-right: 10px;
+}
+header .date span {
+  color: #8c98a8;
+}
+header .logs {
+  width: 60%;
+}
+header .logs ul {
+  margin-top: 8px;
+  padding: 0;
+  list-style-type: none;
+  justify-content: flex-end;
+}
+header .logs ul li:first-child {
+  padding-top: 6px;
+  margin-right: 25px;
+}
+header .logs ul li:first-child span {
+  background: #ff6c5d;
+  color: #fff;
+  padding: 3px 8px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+header .logs ul li:first-child i {
+  color: #8c98a8;
+}
+
 /* SIDEBAR 
 ======================== */
 .user {
@@ -86,7 +135,6 @@ body {
 
 .menu {
   margin-top: 20px;
-  border: 1px solid #000;
 }
 .menu a {
   color: #565055;
@@ -135,14 +183,13 @@ body {
   background: #ffffff;
   height: 100%;
   width: 20%;
-  border-right: 1px solid #c0c7d2;
+  border-right: 1px solid #f7f7f7;
 }
 
 .content {
   background: #ffffff;
   margin-left: 20%;
   width: 80%;
-  border: 1px solid red;
 }
 
 /* FOOTER 
