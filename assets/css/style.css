@@ -9,7 +9,7 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-.flexbox {
+.flexbox, .members ul li {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -279,8 +279,40 @@ header .logs ul li:first-child i {
 }
 
 .members {
-  border: 1px solid lime;
-  width: 20%;
+  border-left: 1px solid #f7f7f7;
+  width: 16%;
+  position: fixed;
+  height: 100%;
+  padding-top: 20px;
+}
+.members ul {
+  margin-top: 15px;
+  list-style-type: none;
+  padding: 0;
+}
+.members ul li {
+  padding: 10px 15px;
+  justify-content: space-between;
+}
+.members ul img {
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+.members ul p {
+  padding-top: 5px;
+}
+.members ul strong {
+  display: block;
+}
+.members ul a {
+  padding-top: 12px;
+  font-size: 1.3em;
+  color: #8c98a8;
 }
 
 /* FOOTER 
