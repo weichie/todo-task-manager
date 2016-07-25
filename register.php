@@ -1,5 +1,12 @@
-<?php include_once('templates/header.php'); ?>
-	
+<?php 
+include_once('templates/header.php'); 
+
+if( isset($register_message) ): ?>
+	<div class="alert alert-warning">
+<?php echo htmlspecialchars($register_message, ENT_QUOTES, 'UTF-8'); ?>
+	</div>
+<?php endif; ?>
+
 	<h1 class="login-title">Todo App</h1>
 
 	<div class="login">
