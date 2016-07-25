@@ -315,6 +315,38 @@ header .logs ul li:first-child i {
   color: #8c98a8;
 }
 
+.login-title {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.login {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 30%;
+  text-align: center;
+}
+.login h2 {
+  margin-bottom: 35px;
+}
+.login .login-form .input-group {
+  margin-bottom: 10px;
+}
+.login .login-form input {
+  border-radius: 0 !important;
+}
+.login .login-form a {
+  margin-top: 5px;
+  color: #6ecbdc;
+  float: left;
+}
+
 /* FOOTER 
 ======================== */
 /* RESPONSIVE 

@@ -5,4 +5,5 @@ $db = new mysqli('localhost','root','root','todo_app');
 
 define('SITE_URL', '/school/todo-task-manager');
 
+$app = new User($db);
 ?>
