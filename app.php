@@ -7,7 +7,9 @@ define('SITE_URL', '/school/todo-task-manager');
 
 spl_autoload_register(function($class_name){
 	include 'classes/' .$class_name . '.class.php';
-})
+});
 
-$app = new User($db);
+$user = new User($db);
+
+//$app = new User($db);
 ?>
