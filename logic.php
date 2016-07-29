@@ -7,4 +7,7 @@
 		$login = $user->login($_POST['email'], $_POST['password']);
 		echo $login;
 	}
+	if(isset($_GET['logout'])){
+		$user -> logout();
+	}
 ?>

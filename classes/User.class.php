@@ -2,10 +2,15 @@
 	class User{
 		protected $userID;
 		protected $username;
+		protected $name;
 		public $db;
 
 		public function __construct($db){
 			$this->db=$db;
+
+			if(isset($_SESSION['logged'])){
+				$this->initUser();
+			}
 		}
 
 		public function setUserID($id){
@@ -14,11 +19,17 @@
 		public function setUsername($username){
 			$this->username = $username;
 		}
+		public function setFullName($name){
+			$this->name = $name;
+		}
 		public function getUserID(){
 			return $this->userID;
 		}
 		public function getUsername(){
 			return $this->username;
+		}
+		public function getFullname(){
+			return $this->name;
 		}
 
 		public function registration($name, $username, $email, $password){
@@ -54,9 +65,9 @@
 					$_SESSION['logged'] = true;
 					$_SESSION['userID'] = $result['id'];
 					$_SESSION['username'] = $result['username'];
+					$_SESSION['fullname'] = $result['name'];
 
-					$this->setUserID($result['id']);
-					$this->setUsername($result['username']);
+					$this->initUser($result);
 
 					header('Location: index.php');
 				}else{
@@ -66,5 +77,23 @@
 				return 'Het opgegeven email adres werd niet gevonden...';
 			}
 		}/*** end login function ***/
+
+		public function initUser($result = null){
+			if($result == null){
+				$this->setUserID($_SESSION['userID']);
+				$this->setUsername($_SESSION['username']);
+				$this->setFullname($_SESSION['fullname']);
+			}else{
+				$this->setUserID($result['id']);
+				$this->setUsername($result['username']);
+				$this->setFullname($result['name']);
+			}
+		}/*** end initUser ***/
+
+		public function logout(){
+			session_destroy();
+			header('Location:'.SITE_URL);
+			exit;
+		}
 	}
 ?>
