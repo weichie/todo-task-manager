@@ -4,7 +4,9 @@
 		<a href="?page=edit"><i class="fa fa-cog" aria-hidden="true"></i></a>
 	</div><!-- ./options -->
 	<div class="profile">
-		<img src="https://randomuser.me/api/portraits/women/80.jpg" alt="user-pic" />
+		<a href="?page=home">
+			<img src="https://randomuser.me/api/portraits/women/80.jpg" alt="user-pic" />
+		</a>
 		<strong>
 			<?php echo $user->getFullname(); ?>
 		</strong>
