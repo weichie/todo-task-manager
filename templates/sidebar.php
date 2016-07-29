@@ -1,14 +1,16 @@
 <div class="user">
 	<div class="options flexbox">
 		<a href="index.php?logout=true"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
-		<a href="#!"><i class="fa fa-cog" aria-hidden="true"></i></a>
+		<a href="?page=edit"><i class="fa fa-cog" aria-hidden="true"></i></a>
 	</div><!-- ./options -->
 	<div class="profile">
 		<img src="https://randomuser.me/api/portraits/women/80.jpg" alt="user-pic" />
 		<strong>
 			<?php echo $user->getFullname(); ?>
 		</strong>
-		<p>Project Manager</p>
+		<p>
+			<?php echo $user->getTitle(); ?>
+		</p>
 	</div><!-- ./profile -->
 </div><!-- ./user -->
 

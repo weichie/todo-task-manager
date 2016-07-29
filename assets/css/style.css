@@ -347,6 +347,14 @@ header .logs ul li:first-child i {
   float: left;
 }
 
+.edit {
+  padding: 30px 50px;
+  width: 100%;
+}
+.edit h2 {
+  margin-bottom: 50px;
+}
+
 /* FOOTER 
 ======================== */
 /* RESPONSIVE 
