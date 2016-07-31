@@ -7,12 +7,8 @@
 		<a href="?page=home">
 			<img src="https://randomuser.me/api/portraits/women/80.jpg" alt="user-pic" />
 		</a>
-		<strong>
-			<?php echo $user->getFullname(); ?>
-		</strong>
-		<p>
-			<?php echo $user->getTitle(); ?>
-		</p>
+		<strong><?php echo $user->getFullname(); ?></strong>
+		<p><?php echo $user->getTitle(); ?></p>
 	</div><!-- ./profile -->
 </div><!-- ./user -->
 
@@ -24,9 +20,12 @@
 
 <div class="menu">
 	<ul>
-		<li><a href="#!"><i class="fa fa-plus blue"></i>Add Project</a></li>
-		<li><a href="#!"><i class="fa fa-folder"></i>Secret project</a></li>
-		<li><a href="#!"><i class="fa fa-folder"></i>Nike Mobile App</a></li>
-		<li><a href="#!"><i class="fa fa-folder"></i>New Portfolio Site</a></li>
+		<li><a href="?page=add_project"><i class="fa fa-plus blue"></i>Add Project</a></li>
+		<!-- <?php //foreach($lists as $list): ?>
+			<li><a href="#!"><i class="fa fa-folder"></i>
+				<?php //echo $projects->getLists(); ?>
+			</a></li>
+		<?php //endforeach; ?> -->
+		<!-- <li><a href="#!"><i class="fa fa-folder"></i>New Portfolio Site</a></li> -->
 	</ul>
 </div><!-- ./menu -->

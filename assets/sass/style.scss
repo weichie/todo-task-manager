@@ -336,6 +336,26 @@ header{
 		margin-bottom: 50px;
 	}
 }
+.add_project{
+	padding: 30px 50px;
+	flex-wrap: wrap;
+
+	h2{
+		margin-bottom: 30px;
+		width: 100%;
+
+		em{
+			font-size: 0.6em;
+		}
+	}
+	form{
+		width: 60%;
+
+		.form-group{
+			margin: 5px 0;
+		}
+	}
+}
 
 /* FOOTER 
 ======================== */

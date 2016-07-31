@@ -355,6 +355,24 @@ header .logs ul li:first-child i {
   margin-bottom: 50px;
 }
 
+.add_project {
+  padding: 30px 50px;
+  flex-wrap: wrap;
+}
+.add_project h2 {
+  margin-bottom: 30px;
+  width: 100%;
+}
+.add_project h2 em {
+  font-size: 0.6em;
+}
+.add_project form {
+  width: 60%;
+}
+.add_project form .form-group {
+  margin: 5px 0;
+}
+
 /* FOOTER 
 ======================== */
 /* RESPONSIVE 
