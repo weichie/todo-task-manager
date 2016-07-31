@@ -1,6 +1,10 @@
+<?php
+	date_default_timezone_set('Belgium/Brussels');
+	$date = date('l d F Y', time());
+?>
 <div class="date">
 	<i class="fa fa-calendar" aria-hidden="true"></i>
-	<span id="date">Friday, 22th July, 2016</span>
+	<span id="date"><?php echo $date ?></span>
 </div><!-- ./date -->
 <div class="logs">
 	<ul class="flexbox">
