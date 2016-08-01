@@ -21,11 +21,14 @@
 <div class="menu">
 	<ul>
 		<li><a href="?page=add_project"><i class="fa fa-plus blue"></i>Add Project</a></li>
-		<!-- <?php //foreach($lists as $list): ?>
-			<li><a href="#!"><i class="fa fa-folder"></i>
-				<?php //echo $projects->getLists(); ?>
-			</a></li>
-		<?php //endforeach; ?> -->
+		<?php 
+			$lists = $projects->getLists();
+			foreach($lists as $list): 
+		?>
+				<li><a href="#!"><i class="fa fa-folder"></i>
+					<?php echo $list['title']; ?>
+				</a></li>
+		<?php endforeach; ?>
 		<!-- <li><a href="#!"><i class="fa fa-folder"></i>New Portfolio Site</a></li> -->
 	</ul>
 </div><!-- ./menu -->

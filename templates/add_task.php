@@ -22,10 +22,19 @@
 						<input type="date" name="deadline" class="form-control" id="deadline" placeholder="Extra informatie bij de lijst">
 					</div>
 				</div>
+
 				<div class="form-group">
 					<label for="project" class="col-sm-2 control-label">project</label>
 					<div class="col-sm-10">
-						<input type="text" name="project" class="form-control" id="project" placeholder="Tot welk project behoort deze taak?">
+						<select class="form-control">
+							<option>Kies een project</option>
+							<?php
+								$lists = $projects->getLists();
+								foreach($lists as $list):
+							?>
+								<option><?php echo $list['title']; ?></option>
+							<?php endforeach; ?>
+						</select>
 					</div>
 				</div>
 				<div class="form-group">

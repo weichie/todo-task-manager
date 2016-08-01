@@ -15,5 +15,20 @@
 				return "Error: " . $query . "<br>" . $conn->error;
 			}
 		}
+
+		public function getTasks(){
+			$query = $this->db->query('SELECT * FROM taken');
+			if($query->num_rows > 0){
+				$tasks = array();
+
+				while($t = $query->fetch_assoc()){
+					$tasks[] = $t;
+				}
+
+				return $tasks;
+			}else{
+				return array();
+			}
+		}
 	}
 ?>
