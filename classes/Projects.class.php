@@ -39,5 +39,15 @@
 				return array();
 			}
 		}
+		/* public function deleteProject(){
+			//$query = "DELETE FROM projecten WHERE id=";
+			if($query->num_rows == 1){
+				if($this->db->query($query) === TRUE){
+					return "Het project " . $title . " is verwijderd.";
+				}else{
+					return "Error: " . $query . "<br>" . $conn->error;
+				}
+			}
+		} */
 	}
 ?>

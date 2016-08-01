@@ -23,6 +23,12 @@
 		$add_list = $projects->new_list($_POST['title'], $_POST['beschrijving']);
 		echo $add_list;
 	}
+	
+	/*
+	if(isset($_GET['delete'])){
+		$projects->deleteProject();
+	}
+	*/
 
 	/* TAKEN ACTIONS
 	=============================== */

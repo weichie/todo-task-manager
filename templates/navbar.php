@@ -11,3 +11,4 @@
 		<li><a href="?page=add_task" class="btn green-btn">Add Task</a></li>
 	</ul>
 </div><!-- ./logs -->
+
