@@ -30,5 +30,12 @@
 				return array();
 			}
 		}
+		public function getSingleTask(){
+			$query = $this->db->query('SELECT * FROM taken WHERE id="'.$this->db->real_escape_string($_GET['id']).'"');
+			$result = $query->fetch_assoc();
+
+			return $result;
+			echo $result;
+		}
 	}
 ?>

@@ -233,6 +233,10 @@ header{
 				p{
 					margin-top: 2px;
 				}
+				a{
+					text-decoration: none;
+					color: #000;
+				}
 				strong{
 					font-size: 1.2em;
 				}
@@ -375,6 +379,30 @@ header{
 			margin: 5px 0;
 		}
 	}
+}
+.single_project{
+	padding: 30px 50px;
+	flex-wrap: wrap;
+	flex-direction: column;
+
+	h6 	{color: $grey;}
+	strong{
+		label{
+			font-weight: 400;
+
+			&::before{
+				content: ' - ';
+				margin-left: 5px;
+			}
+		}
+	}
+
+	p{
+		margin-top: 10px;
+		font-size: 1.2em;
+		width: 60%;
+	}
+
 }
 
 /* FOOTER 

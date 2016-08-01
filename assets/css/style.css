@@ -250,6 +250,10 @@ header .logs ul li:first-child i {
 .list .todo-list li .single-task p {
   margin-top: 2px;
 }
+.list .todo-list li .single-task a {
+  text-decoration: none;
+  color: #000;
+}
 .list .todo-list li .single-task strong {
   font-size: 1.2em;
 }
@@ -388,6 +392,27 @@ header .logs ul li:first-child i {
 }
 .add_project form .form-group {
   margin: 5px 0;
+}
+
+.single_project {
+  padding: 30px 50px;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.single_project h6 {
+  color: #8c98a8;
+}
+.single_project strong label {
+  font-weight: 400;
+}
+.single_project strong label::before {
+  content: ' - ';
+  margin-left: 5px;
+}
+.single_project p {
+  margin-top: 10px;
+  font-size: 1.2em;
+  width: 60%;
 }
 
 /* FOOTER 
