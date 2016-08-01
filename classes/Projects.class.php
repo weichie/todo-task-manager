@@ -24,7 +24,7 @@
 				}
 			}
 		}
-
+		
 		public function getLists(){
 			$query = $this->db->query('SELECT * FROM projecten');
 			if($query->num_rows > 0){

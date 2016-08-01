@@ -335,6 +335,21 @@ header{
 	h2{
 		margin-bottom: 50px;
 	}
+
+	.remove-list{
+		list-style-type: none;
+		padding: 0;
+
+		li{
+			padding: 5px 0;
+			font-size: 1.2em;
+
+			.delete{
+				margin-left: 10px;
+				color: red;
+			}
+		}
+	}
 }
 .add_project{
 	padding: 30px 50px;

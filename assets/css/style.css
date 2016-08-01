@@ -354,6 +354,18 @@ header .logs ul li:first-child i {
 .edit h2 {
   margin-bottom: 50px;
 }
+.edit .remove-list {
+  list-style-type: none;
+  padding: 0;
+}
+.edit .remove-list li {
+  padding: 5px 0;
+  font-size: 1.2em;
+}
+.edit .remove-list li .delete {
+  margin-left: 10px;
+  color: red;
+}
 
 .add_project {
   padding: 30px 50px;

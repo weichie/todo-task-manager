@@ -32,7 +32,7 @@
 			$options = ['cost' => 12];
 
 			$password = password_hash($password, PASSWORD_DEFAULT, $options);
-			$query = "INSERT INTO users(name, username, email, password) VALUES ('".$this->db->real_escape_string($name)."','".$this->db->real_escape_string($username)."','".$this->db->real_escape_string($email)."','".$this->db->real_escape_string($password)."');";
+			$query = "INSERT INTO users(name, username, email, password, type) VALUES ('".$this->db->real_escape_string($name)."','".$this->db->real_escape_string($username)."','".$this->db->real_escape_string($email)."','".$this->db->real_escape_string($password)."','member');";
 
 			//bestaat gebruiker al? based on email
 			$controle = "SELECT name, username, email, password FROM users WHERE email='".$this->db->real_escape_string($email)."'";
@@ -51,7 +51,7 @@
 		}/*** end registration function ***/
 
 		public function login($email, $password){
-			$query = "SELECT id, name, username, email, password, title FROM users WHERE email = '".$this->db->real_escape_string($email)."'";
+			$query = "SELECT id, name, username, email, password, title, type FROM users WHERE email = '".$this->db->real_escape_string($email)."'";
 			$qry = $this->db->query($query);
 			$result = $qry->fetch_assoc();
 
@@ -63,6 +63,10 @@
 					$_SESSION['fullname'] = $result['name'];
 					$_SESSION['email'] = $result['email'];
 					$_SESSION['title'] = $result['title'];
+
+					if($result['type'] == 'admin'){
+						$_SESSION['admin'] = true;
+					}
 
 					$this->initUser($result);
 

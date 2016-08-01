@@ -41,7 +41,22 @@
 						</div>
 					</div>
 				</form>
+				
+				<?php if(isset($_SESSION['admin'])){ ?>
+				<h2>Projecten</h2>
+				<ul class="remove-list">
+				<?php 
+					$lists = $projects->getLists();
+					foreach($lists as $list):
+				?>
+					<li>
+						<?php echo $list['title']; ?>
+						<a href="#!" name="delete_project" class="delete"><i class="fa fa-times"></i></a>
+					</li>
+				<?php endforeach; ?>
+					</ul>
+				<?php } ?>
 			</div><!-- ./edit -->
-		</div><!-- ./app -->
+		</div><!-- ./flexbox -->
 	</div><!-- ./content -->
 </div><!-- ./page -->

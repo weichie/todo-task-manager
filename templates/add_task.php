@@ -26,13 +26,13 @@
 				<div class="form-group">
 					<label for="project" class="col-sm-2 control-label">project</label>
 					<div class="col-sm-10">
-						<select class="form-control">
+						<select class="form-control" name="project">
 							<option>Kies een project</option>
 							<?php
 								$lists = $projects->getLists();
 								foreach($lists as $list):
 							?>
-								<option><?php echo $list['title']; ?></option>
+								<option value="<?php echo $list['title']; ?>"><?php echo $list['title']; ?></option>
 							<?php endforeach; ?>
 						</select>
 					</div>

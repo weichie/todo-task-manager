@@ -17,7 +17,7 @@
 		}
 
 		public function getTasks(){
-			$query = $this->db->query('SELECT * FROM taken');
+			$query = $this->db->query('SELECT * FROM taken ORDER BY deadline asc');
 			if($query->num_rows > 0){
 				$tasks = array();
 
