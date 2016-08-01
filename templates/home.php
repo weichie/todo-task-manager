@@ -22,62 +22,20 @@
 				</div><!-- ./search -->
 
 				<ul>
+				<?php
+					$users = $user->getUsers();
+					foreach($users as $user):
+				?>
 					<li>
 						<img src="https://randomuser.me/api/portraits/women/80.jpg" alt="Member" >
-						<p>
-							<strong>Bob Weichler</strong>
-							<span>Front-end developer</span>
-						</p>
+						<?php
+							echo "<p><strong>" . $user['name'] . "</strong><span>" . $user['title'] . "</span></p>";
+						?>
 						<a href="#!"><i class="fa fa-external-link" aria-hidden="true"></i></a>
 					</li>
-					<li>
-						<img src="https://randomuser.me/api/portraits/women/80.jpg" alt="Member" >
-						<p>
-							<strong>Bob Weichler</strong>
-							<span>Front-end developer</span>
-						</p>
-						<a href="#!"><i class="fa fa-external-link" aria-hidden="true"></i></a>
-					</li>
-					<li>
-						<img src="https://randomuser.me/api/portraits/women/80.jpg" alt="Member" >
-						<p>
-							<strong>Bob Weichler</strong>
-							<span>Front-end developer</span>
-						</p>
-						<a href="#!"><i class="fa fa-external-link" aria-hidden="true"></i></a>
-					</li>
-					<li>
-						<img src="https://randomuser.me/api/portraits/women/80.jpg" alt="Member" >
-						<p>
-							<strong>Bob Weichler</strong>
-							<span>Front-end developer</span>
-						</p>
-						<a href="#!"><i class="fa fa-external-link" aria-hidden="true"></i></a>
-					</li>
-					<li>
-						<img src="https://randomuser.me/api/portraits/women/80.jpg" alt="Member" >
-						<p>
-							<strong>Bob Weichler</strong>
-							<span>Front-end developer</span>
-						</p>
-						<a href="#!"><i class="fa fa-external-link" aria-hidden="true"></i></a>
-					</li>
-					<li>
-						<img src="https://randomuser.me/api/portraits/women/80.jpg" alt="Member" >
-						<p>
-							<strong>Bob Weichler</strong>
-							<span>Front-end developer</span>
-						</p>
-						<a href="#!"><i class="fa fa-external-link" aria-hidden="true"></i></a>
-					</li>
-					<li>
-						<img src="https://randomuser.me/api/portraits/women/80.jpg" alt="Member" >
-						<p>
-							<strong>Bob Weichler</strong>
-							<span>Front-end developer</span>
-						</p>
-						<a href="#!"><i class="fa fa-external-link" aria-hidden="true"></i></a>
-					</li>
+
+				<?php endforeach; ?>
+
 				</ul>
 			</div><!-- ./members -->
 		</div><!-- ./app -->

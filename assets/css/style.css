@@ -304,10 +304,15 @@ header .logs ul li:first-child i {
   border-radius: 50%;
 }
 .members ul p {
+  width: 60%;
   padding-top: 5px;
 }
 .members ul strong {
   display: block;
+}
+.members ul span {
+  color: #8c98a8;
+  font-style: italic;
 }
 .members ul a {
   padding-top: 12px;

@@ -48,7 +48,7 @@
 					return "Error: " . $query . "<br>" . $conn->error;
 				}
 			}
-		}/*** end registration function ***/
+		}
 
 		public function login($email, $password){
 			$query = "SELECT id, name, username, email, password, title, type FROM users WHERE email = '".$this->db->real_escape_string($email)."'";
@@ -77,7 +77,22 @@
 			}else{
 				return 'Het opgegeven email adres werd niet gevonden...';
 			}
-		}/*** end login function ***/
+		}
+
+		public function getUsers(){
+			$query = $this->db->query('SELECT * FROM users ORDER BY type');
+
+			if($query->num_rows > 0){
+				$users = array();
+
+				while($u = $query->fetch_assoc()){
+					$users[] = $u;
+				}
+				return $users;
+			}else{
+				return array();
+			}
+		}
 
 		public function update_user($name, $username, $title, $email){
 			$query = "UPDATE users SET name='".$this->db->real_escape_string($name)."', username='".$this->db->real_escape_string($username)."', title='".$this->db->real_escape_string($title)."', email='".$this->db->real_escape_string($email)."' WHERE id=".$_SESSION['userID'].";";
