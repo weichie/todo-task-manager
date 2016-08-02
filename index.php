@@ -3,6 +3,7 @@ include_once('app.php');
 include_once('logic.php');
 include_once('templates/header.php'); 
 
+
 if(isset($_GET['page'])){
 	if(file_exists('templates/'.$_GET['page'].'.php')){
 		include('templates/'.$_GET['page'].'.php');

@@ -19,10 +19,15 @@
 				<div class="form-group">
 					<label for="deadline" class="col-sm-2 control-label">deadline</label>
 					<div class="col-sm-10">
-						<input type="date" name="deadline" class="form-control" id="deadline" placeholder="Extra informatie bij de lijst">
+						<input type="date" name="deadline" class="form-control" id="deadline">
 					</div>
 				</div>
-
+				<div class="form-group">
+					<label for="beschrijving" class="col-sm-2 control-label">beschrijving</label>
+					<div class="col-sm-10">
+						<textarea type="text" name="beschrijving" class="form-control" id="beschrijving" placeholder="Extra info"></textarea>
+					</div>
+				</div>
 				<div class="form-group">
 					<label for="project" class="col-sm-2 control-label">project</label>
 					<div class="col-sm-10">

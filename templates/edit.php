@@ -51,7 +51,7 @@
 				?>
 					<li>
 						<?php echo $list['title']; ?>
-						<a href="#!" name="delete_project" class="delete"><i class="fa fa-times"></i></a>
+						<a href="?page=edit&delete_project&id=<?php echo $list['id']; ?>" class="delete"><i class="fa fa-times"></i></a>
 					</li>
 				<?php endforeach; ?>
 					</ul>

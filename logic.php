@@ -23,17 +23,17 @@
 		$add_list = $projects->new_list($_POST['title'], $_POST['beschrijving']);
 		echo $add_list;
 	}
-	
-	/*
-	if(isset($_GET['delete'])){
+	if(isset($_GET['delete_project'])){
 		$projects->deleteProject();
 	}
-	*/
 
 	/* TAKEN ACTIONS
 	=============================== */
 	if(isset($_POST['add_task'])){
-		$add_task = $taken->new_task($_POST['title'], $_POST['deadline'], $_SESSION['username'], $_POST['project'], false);
+		$add_task = $taken->new_task($_POST['title'], $_POST['deadline'], $_SESSION['username'], $_POST['beschrijving'], $_POST['project'], false);
 		echo $add_task;
+	}
+	if(isset($_POST['edit_task'])){
+		$taken->edit_task($_POST['title'], $_POST['deadline'], $_POST['beschrijving']);
 	}
 ?>

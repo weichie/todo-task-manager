@@ -404,6 +404,41 @@ header{
 	}
 
 }
+.comments{
+	padding: 25px 50px;
+	flex-direction: column;
+
+	form{
+		width: 60%;
+
+		textarea{
+			margin-top: 20px;
+			margin-bottom: 10px;
+		}
+	}
+
+	.reaction-list{
+		list-style-type: none;
+		padding: 0;
+		margin-top: 20px;
+		width: 60%;
+
+		li{
+			padding: 10px 0;
+			border-bottom: 1px solid darken($stripe, 10%);
+
+			p{
+				color: $grey;
+				font-size: 1.1em;
+				margin: 0;
+			}
+
+			&:last-child{
+				border-bottom: 0;
+			}
+		}
+	}
+}
 
 /* FOOTER 
 ======================== */
