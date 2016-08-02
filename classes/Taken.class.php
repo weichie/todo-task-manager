@@ -6,8 +6,8 @@
 			$this->db = $db;
 		}
 
-		public function new_task($title, $deadline, $created_by, $beschrijving, $project, $done){
-			$query = "INSERT INTO taken(title, deadline, created_by, beschrijving, project, done) VALUES('".$this->db->real_escape_string($title)."','".$this->db->real_escape_string($deadline)."','".$_SESSION['username']."','".$this->db->real_escape_string($beschrijving)."','".$this->db->real_escape_string($project)."','0');";
+		public function new_task($title, $deadline, $werkuren, $created_by, $beschrijving, $project, $done){
+			$query = "INSERT INTO taken(title, deadline, werkuren, created_by, beschrijving, project, done) VALUES('".$this->db->real_escape_string($title)."','".$this->db->real_escape_string($deadline)."','".$this->db->real_escape_string($werkuren)."','".$_SESSION['username']."','".$this->db->real_escape_string($beschrijving)."','".$this->db->real_escape_string($project)."','0');";
 
 			if($this->db->query($query) === TRUE){
 				return "De nieuwe taak is toegevoegd!";
@@ -15,8 +15,8 @@
 				return "Error: " . $query . "<br>" . $conn->error;
 			}
 		}
-		public function edit_task($title, $deadline, $beschrijving){
-			$query = "UPDATE taken SET title='".$this->db->real_escape_string($title)."',deadline='".$this->db->real_escape_string($deadline)."',beschrijving='".$this->db->real_escape_string($beschrijving)."' WHERE id='".$this->db->real_escape_string($_GET['id'])."';";
+		public function edit_task($title, $deadline, $werkuren, $beschrijving){
+			$query = "UPDATE taken SET title='".$this->db->real_escape_string($title)."',deadline='".$this->db->real_escape_string($deadline)."',werkuren='".$this->db->real_escape_string($werkuren)."',beschrijving='".$this->db->real_escape_string($beschrijving)."' WHERE id='".$this->db->real_escape_string($_GET['id'])."';";
 			$controle = "SELECT id FROM taken WHERE id='".$this->db->real_escape_string($_GET['id'])."'";
 
 			$qry = $this->db->query($controle);

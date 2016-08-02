@@ -30,11 +30,11 @@
 	/* TAKEN ACTIONS
 	=============================== */
 	if(isset($_POST['add_task'])){
-		$add_task = $taken->new_task($_POST['title'], $_POST['deadline'], $_SESSION['username'], $_POST['beschrijving'], $_POST['project'], false);
+		$add_task = $taken->new_task($_POST['title'], $_POST['deadline'], $_POST['werkuren'], $_SESSION['username'], $_POST['beschrijving'], $_POST['project'], false);
 		echo $add_task;
 	}
 	if(isset($_POST['edit_task'])){
-		$taken->edit_task($_POST['title'], $_POST['deadline'], $_POST['beschrijving']);
+		$taken->edit_task($_POST['title'], $_POST['deadline'], $_POST['werkuren'], $_POST['beschrijving']);
 	}
 	if(isset($_POST['add_comment'])){
 		$add_comment = $comments->addComment($_GET['id'], $_SESSION['userID'], $_POST['reactie']);

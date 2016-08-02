@@ -23,6 +23,12 @@
 					</div>
 				</div>
 				<div class="form-group">
+					<label for="werkuren" class="col-sm-2 control-label">Werkuren</label>
+					<div class="col-sm-10">
+						<input type="number" class="form-control" name="werkuren" id="werkuren" placeholder="Verwachte werkuren">
+					</div>
+				</div>
+				<div class="form-group">
 					<label for="beschrijving" class="col-sm-2 control-label">beschrijving</label>
 					<div class="col-sm-10">
 						<textarea type="text" name="beschrijving" class="form-control" id="beschrijving" placeholder="Extra info"></textarea>
