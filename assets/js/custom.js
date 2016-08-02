@@ -18,8 +18,17 @@ $(document).ready(function(){
 		$.post('/school/todo-task-manager/ajax.php', {
 			'taak_id': taak_id
 		}, function success(data){
-			console.log(data);
 			box.fadeOut();
 		});
 	});
+
+	$(".changeType").on('change', function(e){
+		var user_id = $(this).attr('data-id');
+
+		$.post('/school/todo-task-manager/ajax.php', {
+			'user_id': user_id
+		}, function success(data){
+			//succes functies
+		});
+	})
 });

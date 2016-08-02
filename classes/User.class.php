@@ -111,6 +111,47 @@
 			}
 		}
 
+		public function makeAdmin($id){
+			$query = "UPDATE users SET type='admin' WHERE id=".$this->db->real_escape_string($id)."";
+			$controle = "SELECT id FROM users WHERE id='".$this->db->real_escape_string($id)."'";
+
+			$qry = $this->db->query($controle);
+			$result = $qry->fetch_assoc();
+
+			if($qry->num_rows == 1){
+				if($this->db->query($query)){
+					return "De gebruiker is aangepast" . $query;
+				}else{
+					return "Error: " . $query . "<br>" . $this->db->error;
+				}
+			}
+		}
+		public function makeMember($id){
+			$query = "UPDATE users SET type='member' WHERE id=".$this->db->real_escape_string($id)."";
+			$controle = "SELECT id FROM users WHERE id='".$this->db->real_escape_string($id)."'";
+
+			$qry = $this->db->query($controle);
+			$result = $qry->fetch_assoc();
+
+			if($qry->num_rows == 1){
+				if($this->db->query($query)){
+					return "De gebruiker is aangepast" . $query;
+				}else{
+					return "Error: " . $query . "<br>" . $this->db->error;
+				}
+			}
+		}
+		public function isAdmin($id){
+			$query = "SELECT * FROM users WHERE id='".$this->db->real_escape_string($id)."'";
+			$isAdmin = $this->db->query($query);
+			$result = $isAdmin->fetch_assoc();
+
+			if($result['type'] == 'admin'){
+				return true;
+			}else{
+				return false;
+			}
+		}
 		public function initUser($result = null){
 			if($result == null){
 				$this->setUserID($_SESSION['userID']);

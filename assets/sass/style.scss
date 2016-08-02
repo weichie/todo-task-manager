@@ -272,6 +272,15 @@ header{
 	position: fixed;
 	height: 100%;
 	padding-top: 20px;
+	
+	.view_all{
+		display: block;
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		color: $blue;
+		font-size: 1.1em;
+	}
 
 	ul{
 		margin-top: 15px;
@@ -303,6 +312,35 @@ header{
 			padding-top: 12px;
 			font-size: 1.3em;
 			color: $grey;
+		}
+	}
+}
+.member-list{
+	padding: 50px;
+
+	ul{
+		list-style-type: none;
+		padding: 0;
+
+		li{
+			margin-bottom: 10px;
+
+			img{
+				margin-right: 10px;
+			}
+
+			strong{
+				font-size: 1.2em;
+				display: block;
+			}
+			span{
+				color: $grey;
+				display: block;
+			}
+			select{
+				margin-top: 10px;
+				width: 150px;
+			}
 		}
 	}
 }

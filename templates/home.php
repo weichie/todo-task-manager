@@ -20,7 +20,9 @@
 						</span>
 					</div><!-- /input-group -->
 				</div><!-- ./search -->
-
+				<?php if($_SESSION['admin']){
+					echo '<a href="?page=user-list" class="view_all">view all members</a>';
+				} ?>
 				<ul>
 				<?php
 					$users = $user->getUsers();
