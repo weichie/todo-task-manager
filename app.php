@@ -12,6 +12,7 @@ spl_autoload_register(function($class_name){
 $user = new User($db);
 $projects = new Projects($db);
 $taken = new Taken($db);
+$comments = new Comments($db);
 
 //$app = new User($db);
 ?>

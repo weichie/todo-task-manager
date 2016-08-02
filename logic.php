@@ -36,4 +36,8 @@
 	if(isset($_POST['edit_task'])){
 		$taken->edit_task($_POST['title'], $_POST['deadline'], $_POST['beschrijving']);
 	}
+	if(isset($_POST['add_comment'])){
+		$add_comment = $comments->addComment($_GET['id'], $_SESSION['userID'], $_POST['reactie']);
+		echo $add_comment;
+	}
 ?>

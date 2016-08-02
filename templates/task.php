@@ -1,6 +1,8 @@
 <?php
 	$single_task = $taken->getSingleTask();
+	$comments = $taken->getComments($_GET['id']);
 	$deadline = new DateTime($single_task['deadline']);
+	$comment_date = new DateTime($comment['date']);
 ?>
 <div class="page flexbox">
 	<div class="sidebar">
@@ -48,25 +50,24 @@
 				</p>
 			<?php } ?>
 		</div><!-- ./app -->
+
 		<div class="flexbox comments">
 			<h4>Plaats een reactie</h4>
 			<form action="" method="post">
 				<textarea name="reactie" class="form-control" rows="5"></textarea>
-				<button type="submit" name="edit_task" class="btn btn-success pull-right">reageren</button>
+				<button type="submit" name="add_comment" class="btn btn-success pull-right">reageren</button>
 			</form>
 			<ul class="reaction-list">
-				<li>
-					<h6>Geplaatst door Weichie op 02/08/2016</h6>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque ipsa minus accusantium ea nulla eligendi distinctio ratione error, nostrum voluptatum. Consequatur, quidem doloremque laudantium inventore perferendis, aliquam natus cumque illo!
-					</p>
-				</li>
-				<li>
-					<h6>Geplaatst door Weichie op 02/08/2016</h6>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque ipsa minus accusantium ea nulla eligendi distinctio ratione error, nostrum voluptatum. Consequatur, quidem doloremque laudantium inventore perferendis, aliquam natus cumque illo!
-					</p>
-				</li>
+				<?php
+					foreach($comments as $comment):
+				?>
+					<li>
+						<h6>Geplaatst door <?php echo $comment['username']; ?> op <?php echo date_format($comment_date, "d/m/Y"); ?></h6>
+						<p><?php echo $comment['comment']; ?></p>
+					</li>
+				<?php
+					endforeach;
+				?>
 			</ul>
 		</div><!-- ./comments -->
 	</div><!-- ./content -->

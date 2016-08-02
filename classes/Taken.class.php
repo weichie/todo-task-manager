@@ -41,7 +41,7 @@
 
 				return $tasks;
 			}else{
-				return array();
+				return false;
 			}
 		}
 		public function getSingleTask(){
@@ -50,6 +50,19 @@
 
 			return $result;
 			echo $result;
+		}
+		public function getComments($id){
+			$getComments = $this->db->query('SELECT * FROM comments INNER JOIN users ON (comments.user_id = users.id) WHERE comments.taak_id = "'.$this->db->real_escape_string($_GET['id']).'" ORDER BY date DESC ');
+
+			if($getComments->num_rows){
+				$comments = array();
+				while($c = $getComments->fetch_assoc()){
+					$comments[] = $c;
+				}
+				return $comments;
+			}else{
+				return false;
+			}
 		}
 	}
 ?>
