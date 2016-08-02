@@ -30,8 +30,22 @@
 				}
 			}
 		}
-		public function getTasks(){
+		public function getAllTasks(){
 			$query = $this->db->query('SELECT * FROM taken ORDER BY deadline asc');
+			if($query->num_rows > 0){
+				$tasks = array();
+
+				while($t = $query->fetch_assoc()){
+					$tasks[] = $t;
+				}
+
+				return $tasks;
+			}else{
+				return false;
+			}
+		}
+		public function getTasks(){
+			$query = $this->db->query('SELECT * FROM taken WHERE done="0" ORDER BY deadline asc');
 			if($query->num_rows > 0){
 				$tasks = array();
 
@@ -63,6 +77,39 @@
 			}else{
 				return false;
 			}
+		}
+		public function markAsDone($id){
+			$query = "UPDATE taken SET done=' 1' WHERE id=".$this->db->real_escape_string($id)."";
+			$controle = "SELECT id FROM taken WHERE id='".$this->db->real_escape_string($id)."'";
+
+			$qry = $this->db->query($controle);
+			$result = $qry->fetch_assoc();
+
+			if($qry->num_rows == 1){
+				if($this->db->query($query)){
+					return "De taak is voltooid!" . $query;
+				}else{
+					return "Error: " . $query . "<br>" . $this->db->error;
+				}
+			}
+		}
+		public function unmarkAsDone($id){
+			$query = "UPDATE taken SET done='0' WHERE id='".$this->db->real_escape_string($id)."'";
+			$controle = "SELECT id FROM taken WHERE id='".$this->db->real_escape_string($id)."'";
+
+			$qry = $this->db->query($controle);
+			$result = $qry->fetch_assoc();
+
+			if($qry->num_rows == 1){
+				if($this->db->query($query)){
+					return "De taak is voltooid!";
+				}else{
+					return "Error: " . $query . "<br>" . $this->db->error;
+				}
+			}
+		} 
+		public function isDone(){
+			return false;
 		}
 	}
 ?>

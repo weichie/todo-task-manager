@@ -40,4 +40,5 @@
 		$add_comment = $comments->addComment($_GET['id'], $_SESSION['userID'], $_POST['reactie']);
 		echo $add_comment;
 	}
+
 ?>
