@@ -7,8 +7,8 @@
 		}
 		
 		public function addComment($taak_id, $user_id, $comment){
-			$query = "INSERT INTO comments(taak_id, user_id, comment, date) VALUES ('".$this->db->real_escape_string($_GET['id'])."','".$this->db->real_escape_string($_SESSION['userID'])."','".$this->db->real_escape_string($comment)."',NOW())";
-			$controle = "SELECT id FROM taken WHERE id='".$this->db->real_escape_string($_GET['id'])."'";
+			$query = "INSERT INTO comments(taak_id, user_id, comment, date) VALUES ('".$this->db->real_escape_string($taak_id)."','".$this->db->real_escape_string($_SESSION['userID'])."','".$this->db->real_escape_string($comment)."',NOW())";
+			$controle = "SELECT id FROM taken WHERE id='".$this->db->real_escape_string($taak_id)."'";
 
 			$qry = $this->db->query($controle);
 			$result = $qry->fetch_assoc();

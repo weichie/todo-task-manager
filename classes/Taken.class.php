@@ -66,7 +66,7 @@
 			echo $result;
 		}
 		public function getComments($id){
-			$getComments = $this->db->query('SELECT * FROM comments INNER JOIN users ON (comments.user_id = users.id) WHERE comments.taak_id = "'.$this->db->real_escape_string($_GET['id']).'" ORDER BY date DESC ');
+			$getComments = $this->db->query('SELECT * FROM comments INNER JOIN users ON (comments.user_id = users.id) WHERE comments.taak_id = "'.$this->db->real_escape_string($id).'" ORDER BY date DESC ');
 
 			if($getComments->num_rows){
 				$comments = array();
@@ -75,7 +75,7 @@
 				}
 				return $comments;
 			}else{
-				return false;
+				return array();
 			}
 		}
 		public function markAsDone($id){

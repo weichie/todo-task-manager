@@ -71,7 +71,7 @@
 		<div class="flexbox comments">
 			<h4>Plaats een reactie</h4>
 			<form>
-				<textarea name="reactie" id="commentMessage" class="form-control" rows="5"></textarea>
+				<textarea name="reactie" data-id="<?php echo $_GET['id']; ?>" class="form-control commentMessage" rows="5"></textarea>
 				<button name="add_comment" class="btn btn-success pull-right placeComment">reageren</button>
 			</form>
 			<ul class="reaction-list">

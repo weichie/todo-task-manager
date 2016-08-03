@@ -10,7 +10,8 @@
 		echo $login;
 	}
 	if(isset($_POST['updating'])){
-		$updating = $user->update_user($_POST['name'], $_POST['username'], $_POST['title'], $_POST['email']);
+		$upload = $user->upload_avatar($_POST['user_avatar']);
+		$updating = $user->update_user($_POST['name'], $_POST['username'], $_POST['title'], $_POST['email'], $_POST['user_avatar']);
 		echo $updating;
 	}
 	if(isset($_GET['logout'])){
@@ -36,9 +37,10 @@
 	if(isset($_POST['edit_task'])){
 		$taken->edit_task($_POST['title'], $_POST['deadline'], $_POST['werkuren'], $_POST['beschrijving']);
 	}
+	/*
 	if(isset($_POST['add_comment'])){
 		$add_comment = $comments->addComment($_GET['id'], $_SESSION['userID'], $_POST['reactie']);
 		echo $add_comment;
-	}
+	}*/
 
 ?>

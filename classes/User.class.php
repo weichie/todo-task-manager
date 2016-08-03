@@ -94,8 +94,8 @@
 			}
 		}
 
-		public function update_user($name, $username, $title, $email){
-			$query = "UPDATE users SET name='".$this->db->real_escape_string($name)."', username='".$this->db->real_escape_string($username)."', title='".$this->db->real_escape_string($title)."', email='".$this->db->real_escape_string($email)."' WHERE id=".$_SESSION['userID'].";";
+		public function update_user($name, $username, $title, $email, $avatar){
+			$query = "UPDATE users SET name='".$this->db->real_escape_string($name)."', username='".$this->db->real_escape_string($username)."', title='".$this->db->real_escape_string($title)."', email='".$this->db->real_escape_string($email)."', avatar='".$this->db->real_escape_string($avatar)." WHERE id=".$_SESSION['userID'].";";
 			$controle = "SELECT id FROM users WHERE id=".$_SESSION['userID']."";
 
 			$qry = $this->db->query($controle);

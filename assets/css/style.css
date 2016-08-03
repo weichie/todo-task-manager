@@ -397,6 +397,9 @@ header .logs ul li:first-child i {
 .edit h2 {
   margin-bottom: 50px;
 }
+.edit input[type="file"] {
+  padding: 8px 15px;
+}
 .edit .remove-list {
   list-style-type: none;
   padding: 0;

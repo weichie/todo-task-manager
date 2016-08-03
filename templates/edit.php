@@ -36,6 +36,10 @@
 						</div>
 					</div>
 					<div class="form-group">
+					<label form="upload" class="col-sm-2 control-label">Avatar</label>
+						<input type="file" id="upload" name="user_avatar" id="upload">
+					</div>
+					<div class="form-group">
 						<div class="col-sm-7">
 							<button type="submit" name="updating" class="btn btn-success pull-right">update</button>
 						</div>
