@@ -29,9 +29,24 @@
 			$lists = $projects->getLists();
 			foreach($lists as $list): 
 		?>
-				<li><a href="?page=single-list&id=<?php echo $list['id']; ?>"><i class="fa fa-folder"></i>
-					<?php echo $list['title']; ?>
+				<li><a href="?page=single-list&id=<?php echo $list['pid']; ?>"><i class="fa fa-folder"></i>
+					<?php echo $list['ptit']; ?>
 				</a></li>
 		<?php endforeach; ?>
+	</ul>
+	<h5>Lijsten die je volgt:</h5>
+	<ul class="follow-lists">
+		<?php
+			$followers = $volgend->getFollowList();
+			foreach($followers as $follow):
+		?>
+			<li>
+				<a href="?page=single-list&id=<?php echo $follow['pid']; ?>"><i class="fa fa-folder"></i>
+					<?php echo $follow['ptitle']; ?>
+				</a>
+			</li>
+		<?php
+			endforeach;
+		?>
 	</ul>
 </div><!-- ./menu -->

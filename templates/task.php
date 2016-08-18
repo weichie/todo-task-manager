@@ -80,7 +80,7 @@
 						$comment_date = new DateTime($comment['date']);
 				?>
 					<li>
-						<h6>Geplaatst door <?php echo $comment['username']; ?> op <?php echo date_format($comment_date, "d/m/Y"); ?></h6>
+						<h6>Geplaatst door&nbsp;<?php echo $comment['username']; ?> op <?php echo date_format($comment_date, "d/m/Y"); ?></h6>
 						<p><?php echo $comment['comment']; ?></p>
 					</li>
 				<?php

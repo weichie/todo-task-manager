@@ -37,10 +37,10 @@
 	if(isset($_POST['edit_task'])){
 		$taken->edit_task($_POST['title'], $_POST['deadline'], $_POST['werkuren'], $_POST['beschrijving']);
 	}
-	/*
-	if(isset($_POST['add_comment'])){
-		$add_comment = $comments->addComment($_GET['id'], $_SESSION['userID'], $_POST['reactie']);
-		echo $add_comment;
-	}*/
 
+	/* VOLG ACTIONS
+	=============================== */
+	if(isset($_POST['follow'])){
+		$add_to_personal_list = $volgend->follow($_SESSION['userID'], $_POST['list_id']);
+	}
 ?>

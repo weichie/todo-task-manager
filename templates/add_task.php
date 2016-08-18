@@ -43,7 +43,7 @@
 								$lists = $projects->getLists();
 								foreach($lists as $list):
 							?>
-								<option value="<?php echo $list['title']; ?>"><?php echo $list['title']; ?></option>
+								<option value="<?php echo $list['ptit']; ?>"><?php echo $list['ptit']; ?></option>
 							<?php endforeach; ?>
 						</select>
 					</div>

@@ -26,7 +26,8 @@
 		}
 		
 		public function getLists(){
-			$query = $this->db->query('SELECT * FROM projecten');
+			/* $query = $this->db->query('SELECT * FROM projecten'); */
+			$query = $this->db->query('SELECT *, projecten.id as pid, projecten.title as ptit FROM projecten INNER JOIN users on projecten.creator = users.username WHERE users.id="'.$_SESSION['userID'].'"');
 			if($query->num_rows > 0){
 				$lists = array();
 

@@ -216,6 +216,13 @@ header{
 			padding: 15px 15px;
 	}
 
+	h5{
+		margin-top: 50px;
+		padding-left: 30px;
+		color: $dark-txt;
+		font-weight: 600;
+	}
+
 	ul{
 		margin: 0;
 		padding: 5px 20px;
@@ -572,8 +579,59 @@ header{
 	}
 }
 
-.pub-user{
-	border: 1px solid red;
+.pub-user{	
+	.main-profile{
+		margin-top: 30px;
+		margin-bottom: 30px;
+		margin-left: 50px;
+		width: 40%;
+		flex-wrap: wrap;
+
+		.pic{
+			margin-right: 15px;
+			width: 100px;
+			height: 100px;
+			background-size: cover !important;
+			background-position: top center !important;
+		}
+		.info 	{width: 75%;}
+		h2{
+			font-size: 2em;
+			font-weight: 700;
+			margin-top: 5px;
+			width: 100%;
+
+			span{
+				font-weight: 300;
+				font-size: 0.6em;
+				font-style: italic;
+				margin-left: 10px;
+			}
+		}
+		p{
+			margin: 2px 0;
+			color: $grey;
+
+			&.type{
+				text-transform: uppercase;
+				font-style: italic;
+			}
+		}
+	}
+
+	h4{
+		display: inline-block;
+		margin-left: 50px;
+	}
+
+	.empty-list{
+		margin: 50px;
+		padding: 20px 35px;
+		color: #fff;
+		display: inline-block;
+		background: $purple;
+		border: 1px solid darken($purple, 10%);
+	}
 
 	.public-lists{
 		margin-left: 50px;

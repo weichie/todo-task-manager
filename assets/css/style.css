@@ -226,6 +226,12 @@ header .logs ul li:nth-child(2) {
   text-decoration: none;
   padding: 15px 15px;
 }
+.menu h5 {
+  margin-top: 50px;
+  padding-left: 30px;
+  color: #565055;
+  font-weight: 600;
+}
 .menu ul {
   margin: 0;
   padding: 5px 20px;
@@ -582,8 +588,54 @@ header .logs ul li:nth-child(2) {
   padding-top: 15px;
 }
 
-.pub-user {
-  border: 1px solid red;
+.pub-user .main-profile {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 50px;
+  width: 40%;
+  flex-wrap: wrap;
+}
+.pub-user .main-profile .pic {
+  margin-right: 15px;
+  width: 100px;
+  height: 100px;
+  background-size: cover !important;
+  background-position: top center !important;
+}
+.pub-user .main-profile .info {
+  width: 75%;
+}
+.pub-user .main-profile h2 {
+  font-size: 2em;
+  font-weight: 700;
+  margin-top: 5px;
+  width: 100%;
+}
+.pub-user .main-profile h2 span {
+  font-weight: 300;
+  font-size: 0.6em;
+  font-style: italic;
+  margin-left: 10px;
+}
+.pub-user .main-profile p {
+  margin: 2px 0;
+  color: #8c98a8;
+}
+.pub-user .main-profile p.type {
+  text-transform: uppercase;
+  font-style: italic;
+}
+.pub-user h4 {
+  display: inline-block;
+  margin-left: 50px;
+}
+.pub-user .empty-list {
+  margin: 50px;
+  padding: 20px 35px;
+  color: #fff;
+  display: inline-block;
+  background: #9f7fff;
+  border: 1px solid #794cff;
 }
 .pub-user .public-lists {
   margin-left: 50px;
