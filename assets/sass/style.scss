@@ -121,6 +121,9 @@ header{
 						color: $grey;
 					}
 				}
+				&:nth-child(2){
+					margin-right: 5px;
+				}
 			}
 		}
 	}
@@ -270,6 +273,7 @@ header{
 	border-left: 1px solid $stripe;
 	width: 16%;
 	position: fixed;
+	right: 0;
 	height: 100%;
 	padding-top: 20px;
 	
@@ -480,6 +484,15 @@ header{
 			}
 		}
 	}
+}
+
+.werkuren{
+	border: 1px solid lime;
+	padding: 50px;
+}
+
+.single-list{
+	border: 1px solid blue;
 }
 
 /* FOOTER 

@@ -10,7 +10,7 @@
 		<div class="flexbox">
 			<div class="edit">
 				<h2>Update je profiel</h2>
-				<form class="form-horizontal" action="" method="post">
+				<form class="form-horizontal" enctype="multipart/form-data" action="" method="post">
 					<div class="form-group">
 						<label for="name" class="col-sm-2 control-label">Naam</label>
 						<div class="col-sm-5">
@@ -36,7 +36,7 @@
 						</div>
 					</div>
 					<div class="form-group">
-					<label form="upload" class="col-sm-2 control-label">Avatar</label>
+						<label form="upload" class="col-sm-2 control-label">Avatar</label>
 						<input type="file" id="upload" name="user_avatar" id="upload">
 					</div>
 					<div class="form-group">

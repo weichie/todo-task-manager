@@ -5,7 +5,8 @@
 	</div><!-- ./options -->
 	<div class="profile">
 		<a href="?page=home">
-			<img src="https://randomuser.me/api/portraits/women/80.jpg" alt="user-pic" />
+			<img src="../uploads/avatar/<?php echo $user->getAvatar(); ?>">
+			<!-- <img src="https://randomuser.me/api/portraits/women/80.jpg" alt="user-pic" /> -->
 		</a>
 		<strong><?php echo $user->getFullname(); ?></strong>
 		<p><?php echo $user->getTitle(); ?></p>
@@ -29,7 +30,7 @@
 			$lists = $projects->getLists();
 			foreach($lists as $list): 
 		?>
-				<li><a href="#!"><i class="fa fa-folder"></i>
+				<li><a href="?page=single-list&id=<?php echo $list['id']; ?>"><i class="fa fa-folder"></i>
 					<?php echo $list['title']; ?>
 				</a></li>
 		<?php endforeach; ?>

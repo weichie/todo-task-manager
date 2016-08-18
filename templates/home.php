@@ -7,7 +7,7 @@
 		<header class="flexbox">
 			<?php include_once('navbar.php'); ?>
 		</header>
-		<div class="flexbox">
+		<div class="place flexbox">
 			<div class="list">
 				<?php include_once('list.php'); ?>
 			</div><!-- ./list -->

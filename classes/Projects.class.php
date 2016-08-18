@@ -39,6 +39,26 @@
 				return array();
 			}
 		}
+
+		public function getSingleList(){
+			$query = $this->db->query('SELECT *, taken.title as taaktitle FROM taken INNER JOIN projecten ON taken.project = projecten.title WHERE projecten.id="'.$this->db->real_escape_string($_GET['id']).'"');
+			/* $result = $query->fetch_assoc(); */
+
+			if($query->num_rows > 0){
+				$lists = array();
+
+				while($l = $query->fetch_assoc()){
+					$lists[] = $l;
+				}
+
+				return $lists;
+			}else{
+				return array();
+			}
+
+			/* return $result; */
+		}
+
 		public function deleteProject(){
 			$query = "DELETE FROM projecten WHERE id='".$this->db->real_escape_string($_GET['id'])."'";
 

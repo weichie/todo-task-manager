@@ -119,6 +119,9 @@ header .logs ul li:first-child span {
 header .logs ul li:first-child i {
   color: #8c98a8;
 }
+header .logs ul li:nth-child(2) {
+  margin-right: 5px;
+}
 
 /* SIDEBAR 
 ======================== */
@@ -286,6 +289,7 @@ header .logs ul li:first-child i {
   border-left: 1px solid #f7f7f7;
   width: 16%;
   position: fixed;
+  right: 0;
   height: 100%;
   padding-top: 20px;
 }
@@ -480,6 +484,15 @@ header .logs ul li:first-child i {
 }
 .comments .reaction-list li:last-child {
   border-bottom: 0;
+}
+
+.werkuren {
+  border: 1px solid lime;
+  padding: 50px;
+}
+
+.single-list {
+  border: 1px solid blue;
 }
 
 /* FOOTER 

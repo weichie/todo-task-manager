@@ -10,8 +10,8 @@
 		echo $login;
 	}
 	if(isset($_POST['updating'])){
-		$upload = $user->upload_avatar($_POST['user_avatar']);
-		$updating = $user->update_user($_POST['name'], $_POST['username'], $_POST['title'], $_POST['email'], $_POST['user_avatar']);
+		$upload = $user->upload_avatar($_FILES['user_avatar']);
+		$updating = $user->update_user($_POST['name'], $_POST['username'], $_POST['title'], $_POST['email'], $_FILES['user_avatar']);
 		echo $updating;
 	}
 	if(isset($_GET['logout'])){
