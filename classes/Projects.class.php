@@ -15,12 +15,12 @@
 			$result = $qry->fetch_assoc();
 
 			if($qry->num_rows == 1){
-				return "Er is al een lijst aangemaakt met de naam " . $title;
+				return "<div class='err-message' id='message'>Er is al een lijst aangemaakt met de naam " . $title . "</div>";
 			}else{
 				if($this->db->query($query) === TRUE){
-					return "De lijst " . $title . " werd met succes aangemaak!";
+					return "<div class='suc-message' id='message'>De lijst " . $title . " werd met succes aangemaak!</div>";
 				}else{
-					return "Error: " . $query . "<br>" . $conn->error;
+					return "<div class='err-message' id='message'>Error: " . $query . "<br>" . $conn->error . "</div>";
 				}
 			}
 		}
@@ -63,9 +63,9 @@
 			$query = "DELETE FROM projecten WHERE id='".$this->db->real_escape_string($_GET['id'])."'";
 
 			if($this->db->query($query) === TRUE){
-				return "Het project is verwijderd.";
+				return "<div class='suc-message' id='message'>Het project is verwijderd.</div>";
 			}else{
-				return "Error: " . $query . "<br>" . $conn->error;
+				return "<div class='err-message' id='message'>Error: " . $query . "<br>" . $conn->error . "</div>";
 			}
 		}
 	}

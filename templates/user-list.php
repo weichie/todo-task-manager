@@ -14,7 +14,7 @@
 				foreach($users as $user):
 			?>
 				<li class="flexbox">
-					<img src="https://randomuser.me/api/portraits/women/80.jpg" alt="Member" >
+					<div class="prof-picture" style="background: url('uploads/avatar/<?php echo $user['avatar']; ?>') no-repeat;"></div>
 					<p>
 						<strong><?php echo $user['name']; ?></strong>
 						<span><?php echo $user['title']; ?></span>

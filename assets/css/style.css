@@ -25,23 +25,23 @@ body {
 }
 
 .blue {
-  color: #6ecbdc;
+  color: #6ecbdc !important;
 }
 
 .green {
-  color: #63c278;
+  color: #63c278 !important;
 }
 
 .orange {
-  color: #ffc483;
+  color: #ffc483 !important;
 }
 
 .red {
-  color: #ff6c5d;
+  color: #ff6c5d !important;
 }
 
 .purple {
-  color: #9f7fff;
+  color: #9f7fff !important;
 }
 
 .bg-blue {
@@ -70,6 +70,26 @@ body {
 }
 
 .green-btn {
+  background: #63c278;
+  color: #fff;
+}
+
+.err-message {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px 50px;
+  z-index: 99;
+  background: #ff6c5d;
+  color: #fff;
+}
+
+.suc-message {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px 50px;
+  z-index: 99;
   background: #63c278;
   color: #fff;
 }
@@ -159,6 +179,42 @@ header .logs ul li:nth-child(2) {
 
 .search {
   padding: 5px 20px;
+}
+
+.home-avatar {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background-size: cover !important;
+  background-position: top center !important;
+}
+
+.prof-picture {
+  margin-right: 15px;
+  width: 125px;
+  height: 125px;
+  background-size: cover !important;
+  background-position: top center !important;
+}
+
+.thumb-avatar {
+  width: 60px;
+  height: 60px;
+  diplay: inline-block;
+  margin-right: 20px;
+  float: left;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background-size: cover !important;
+  background-position: top center !important;
 }
 
 .menu {
@@ -524,6 +580,35 @@ header .logs ul li:nth-child(2) {
 }
 .single-list .checker {
   padding-top: 15px;
+}
+
+.pub-user {
+  border: 1px solid red;
+}
+.pub-user .public-lists {
+  margin-left: 50px;
+  list-style-type: none;
+  padding: 0;
+  width: 40%;
+}
+.pub-user .public-lists li {
+  position: relative;
+  display: block;
+  padding: 10px 30px;
+  background: #e3e6ea;
+  border: 1px solid #c6ccd4;
+}
+.pub-user .public-lists h5 {
+  font-weight: 700;
+}
+.pub-user .public-lists .nfollow {
+  position: absolute;
+  display: inline-block;
+  top: 30px;
+  right: 20px;
+  padding: 5px 10px;
+  font-style: italic;
+  color: #8c98a8;
 }
 
 /* FOOTER 

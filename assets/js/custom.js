@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+	setTimeout(function(){
+		$('#message').slideToggle('fast');
+	}, 2500);
+
 	$(".placeComment").on('click', function(e){
 		e.preventDefault();
 		var taak_id = $('.commentMessage').attr('data-id');

@@ -29,7 +29,7 @@
 					foreach($users as $user):
 				?>
 					<li>
-						<img src="https://randomuser.me/api/portraits/women/80.jpg" alt="Member" >
+						<img src="uploads/avatar/<?php echo $user['avatar']; ?>" alt="Member" >
 						<?php
 							echo "<p><strong>" . $user['name'] . "</strong><span>" . $user['title'] . "</span></p>";
 						?>

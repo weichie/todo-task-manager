@@ -10,9 +10,9 @@
 			$query = "INSERT INTO taken(title, deadline, werkuren, created_by, beschrijving, project, done) VALUES('".$this->db->real_escape_string($title)."','".$this->db->real_escape_string($deadline)."','".$this->db->real_escape_string($werkuren)."','".$_SESSION['username']."','".$this->db->real_escape_string($beschrijving)."','".$this->db->real_escape_string($project)."','0');";
 
 			if($this->db->query($query) === TRUE){
-				return "De nieuwe taak is toegevoegd!";
+				return "<div class='suc-message' id='message'>De nieuwe taak is toegevoegd!</div>";
 			}else{
-				return "Error: " . $query . "<br>" . $conn->error;
+				return "<div class='err-message' id='message'>Error: " . $query . "<br>" . $conn->error . "</div>";
 			}
 		}
 		public function edit_task($title, $deadline, $werkuren, $beschrijving){
@@ -24,9 +24,9 @@
 
 			if($qry->num_rows == 1){
 				if($this->db->query($query)){
-					return "De taak is bewerkt.";
+					return "<div class='suc-message' id='message'>De taak is bewerkt.</div>";
 				}else{
-					return "Error: " . $query . "<br>" . $this->db->error;
+					return "<div class='err-message' id='message'>Error: " . $query . "<br>" . $this->db->error . "</div>";
 				}
 			}
 		}
@@ -45,7 +45,8 @@
 			}
 		}
 		public function getTasks(){
-			$query = $this->db->query('SELECT * FROM taken WHERE done="0" ORDER BY deadline asc');
+			/* $query = $this->db->query('SELECT * FROM taken WHERE done="0" ORDER BY deadline asc'); */
+			$query = $this->db->query('SELECT *, taken.title as ttitle FROM taken INNER JOIN users ON taken.created_by = users.username WHERE done="0" ORDER BY deadline asc');
 			if($query->num_rows > 0){
 				$tasks = array();
 
@@ -87,9 +88,9 @@
 
 			if($qry->num_rows == 1){
 				if($this->db->query($query)){
-					return "De taak is voltooid!" . $query;
+					return "<div class='suc-message' id='message'>De taak is voltooid!" . $query . "</div>";
 				}else{
-					return "Error: " . $query . "<br>" . $this->db->error;
+					return "<div class='err-message' id='message'>Error: " . $query . "<br>" . $this->db->error . "</div>";
 				}
 			}
 		}
@@ -102,9 +103,9 @@
 
 			if($qry->num_rows == 1){
 				if($this->db->query($query)){
-					return "De taak is voltooid!";
+					return "<div class='suc-message' id='message'>De taak is voltooid!</div>";
 				}else{
-					return "Error: " . $query . "<br>" . $this->db->error;
+					return "<div class='err-message' id='message'>Error: " . $query . "<br>" . $this->db->error . "</div>";
 				}
 			}
 		} 

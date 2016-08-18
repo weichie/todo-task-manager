@@ -5,9 +5,9 @@
 	?>
 		<li class="flexbox">
 			<div class="single-task">
-				<img src="https://randomuser.me/api/portraits/women/80.jpg" alt="Member">
+				<div class="thumb-avatar" style="background: url('uploads/avatar/<?php echo $task['avatar']; ?>') no-repeat;"></div>
 				<p>
-					<a href="?page=task&id=<?php echo $task['id']; ?>"><strong><?php echo $task['title']; ?></strong></a>
+					<a href="?page=task&id=<?php echo $task['id']; ?>"><strong><?php echo $task['ttitle']; ?></strong></a>
 					<?php
 						$date1 = new DateTime("now");
 						$date2 = new DateTime($task['deadline']);

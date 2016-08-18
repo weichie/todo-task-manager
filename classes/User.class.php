@@ -43,10 +43,10 @@
 			$result = $qry->fetch_assoc();
 
 			if($qry->num_rows == 1){
-				return 'Dit email adres is al in gebruik...';
+				return '<div class="err-message" id="message">Dit email adres is al in gebruik...</div>';
 			}else{
 				if($this->db->query($query) === TRUE){
-					return "U bent succesvol geregistreerd!<br>U kan zich vanaf nu aanmelden.";
+					return "<div class='suc-message' id='message'>U bent succesvol geregistreerd!<br>U kan zich vanaf nu aanmelden.</div>";
 				}else{
 					return "Error: " . $query . "<br>" . $conn->error;
 				}
@@ -76,10 +76,10 @@
 
 					header('Location: index.php');
 				}else{
-					return 'Aanmelden niet gelukt, probeer het nog een keer...';
+					return '<div class="err-message" id="message">Aanmelden niet gelukt, probeer het nog een keer...</div>';
 				}
 			}else{
-				return 'Het opgegeven email adres werd niet gevonden...';
+				return '<div class="err-message" id="message">Het opgegeven email adres werd niet gevonden...</div>';
 			}
 		}
 
@@ -98,8 +98,8 @@
 			}
 		}
 
-		public function getSingleUser(){
-			$query = $this->db->query('SELECT * FROM users INNER JOIN taken ON users.username = taken.created_by WHERE users.id="'.$this->db->real_escape_string($_GET['id']).'"');
+		public function getUserProfile(){
+			$query = $this->db->query('SELECT *, users.title as utitle, projecten.title as ptitle FROM users INNER JOIN projecten ON users.username = projecten.creator WHERE users.id="'.$this->db->real_escape_string($_GET['id']).'" AND projecten.public=1');
 
 			if($query->num_rows > 0){
 				$lists = array();
@@ -123,10 +123,10 @@
 
 			if($qry->num_rows == 1){
 				if($this->db->query($query)){
-					return "Uw account werd succesvol geupdate!";
+					return "<div class='suc-message' id='message'>Uw account werd succesvol geupdate!</div>";
 					$this->initUser($result);
 				}else{
-					return "Error:" . $query . "<br>" . $this->db->error;
+					return "<div class='err-message' id='message'>Error:" . $query . "<br>" . $this->db->error . "</div>";
 				}
 			}
 		}
@@ -140,9 +140,9 @@
 
 			if($qry->num_rows == 1){
 				if($this->db->query($query)){
-					return "De gebruiker is aangepast" . $query;
+					return "<div class='suc-message' id='message'>De gebruiker is aangepast" . $query . "</div>";
 				}else{
-					return "Error: " . $query . "<br>" . $this->db->error;
+					return "<div class='err-message' id='message'>Error: " . $query . "<br>" . $this->db->error . "</div>";
 				}
 			}
 		}
@@ -155,9 +155,9 @@
 
 			if($qry->num_rows == 1){
 				if($this->db->query($query)){
-					return "De gebruiker is aangepast" . $query;
+					return "<div class='suc-message' id='message'>De gebruiker is aangepast" . $query . "</div>";
 				}else{
-					return "Error: " . $query . "<br>" . $this->db->error;
+					return "<div class='err-message' id='message'>Error: " . $query . "<br>" . $this->db->error . "</div>";
 				}
 			}
 		}
@@ -202,9 +202,9 @@
 					$query = 'UPDATE users SET avatar="'.$this->db->real_escape_string($file['name']).'" WHERE id="'.$this->getUserID().'"';
 
 					if($this->db->query($query)){
-						echo "Avatar succesvol geupdate!";
+						echo "<div class='suc-message' id='message'>Avatar succesvol geupdate!</div>";
 					}else{
-						return "Error" . $query . "<br>" . $this->db->error;
+						return "<div class='err-message' id='message'>Error" . $query . "<br>" . $this->db->error . "</div>";
 					}
 				}
 			}

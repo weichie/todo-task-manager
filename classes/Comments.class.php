@@ -15,9 +15,9 @@
 
 			if($qry->num_rows == 1){
 				if($this->db->query($query)){
-					return "Comment toegevoegd";
+					return "<div class='suc-message' id='message'>Comment toegevoegd</div>";
 				}else{
-					return "Error: " . $query . "<br>" . $this->db->error;
+					return "<div class='err-message' id='message'>Error: " . $query . "<br>" . $this->db->error . "</div>";
 				}
 			}
 		}

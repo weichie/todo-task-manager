@@ -21,6 +21,8 @@
 		<div class="form-group">
 			<input type="password" class="form-control" name="password" id="password" placeholder="wachtwoord">
 		</div>
-		<button type="submit" class="btn btn-default" name="registration">Submit</button>
+		<button type="submit" class="btn btn-default" name="registration">Registreren</button><br>
+		<br>
+		<a href="?page=login">Hebt u al een account?</a>
 	</form>
 </div><!-- ./login -->

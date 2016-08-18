@@ -5,8 +5,7 @@
 	</div><!-- ./options -->
 	<div class="profile">
 		<a href="?page=home">
-			<img src="../uploads/avatar/<?php echo $user->getAvatar(); ?>">
-			<!-- <img src="https://randomuser.me/api/portraits/women/80.jpg" alt="user-pic" /> -->
+			<div class="home-avatar" style="background: url('uploads/avatar/<?php echo $user->getAvatar(); ?>') no-repeat;"></div>
 		</a>
 		<strong><?php echo $user->getFullname(); ?></strong>
 		<p><?php echo $user->getTitle(); ?></p>
