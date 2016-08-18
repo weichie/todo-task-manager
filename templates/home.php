@@ -33,7 +33,7 @@
 						<?php
 							echo "<p><strong>" . $user['name'] . "</strong><span>" . $user['title'] . "</span></p>";
 						?>
-						<a href="#!"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+						<a href="?page=public_user&id=<?php echo $user['id']; ?>"><i class="fa fa-external-link" aria-hidden="true"></i></a>
 					</li>
 
 				<?php endforeach; ?>

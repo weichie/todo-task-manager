@@ -492,7 +492,40 @@ header{
 }
 
 .single-list{
-	border: 1px solid blue;
+	ul{
+		padding: 0;
+		width: 100%;
+
+		li{
+			justify-content: space-between;
+			padding: 10px 25px;
+
+			strong{
+				color: #333;
+				font-weight: 700;
+				font-size: 1.2em;
+			}
+			label{
+				padding: 5px 10px;
+				margin-left: 10px;
+				text-transform: uppercase;
+				@include border-radius(5px);
+			}
+			span{
+				display: block;
+				color: $grey;
+				font-weight: 300;
+			}
+
+			&:hover{
+				background: lighten($grey, 35%);
+			}
+		}
+	}
+
+	.checker{
+		padding-top: 15px;
+	}
 }
 
 /* FOOTER 

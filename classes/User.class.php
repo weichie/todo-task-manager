@@ -98,6 +98,22 @@
 			}
 		}
 
+		public function getSingleUser(){
+			$query = $this->db->query('SELECT * FROM users INNER JOIN taken ON users.username = taken.created_by WHERE users.id="'.$this->db->real_escape_string($_GET['id']).'"');
+
+			if($query->num_rows > 0){
+				$lists = array();
+
+				while($l = $query->fetch_assoc()){
+					$lists[] = $l;
+				}
+
+				return $lists;
+			}else{
+				return array();
+			}
+		}
+
 		public function update_user($name, $username, $title, $email, $avatar){
 			$query = "UPDATE users SET name='".$this->db->real_escape_string($name)."', username='".$this->db->real_escape_string($username)."', title='".$this->db->real_escape_string($title)."', email='".$this->db->real_escape_string($email)."', avatar='".$this->db->real_escape_string($avatar['name'])."' WHERE id=".$_SESSION['userID'].";";
 			$controle = "SELECT id FROM users WHERE id=".$_SESSION['userID']."";

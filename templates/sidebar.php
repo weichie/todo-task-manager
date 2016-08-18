@@ -22,11 +22,11 @@
 <div class="menu">
 	<ul>
 		<?php
-			if(isset($_SESSION['admin'])){
+			/* if(isset($_SESSION['admin'])){ */
 		?>
 		<li><a href="?page=add_project"><i class="fa fa-plus blue"></i>Add Project</a></li>
 		<?php 
-			}
+			/* } */
 			$lists = $projects->getLists();
 			foreach($lists as $list): 
 		?>

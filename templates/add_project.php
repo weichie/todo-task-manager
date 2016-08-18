@@ -22,6 +22,11 @@
 						<textarea type="text" rows="5" name="beschrijving" class="form-control" id="beschrijving" placeholder="Extra informatie bij de lijst"></textarea>
 					</div>
 				</div>
+				<div class="checkbox col-sm-10 col-sm-offset-2">
+					<label>
+						<input type="checkbox" name="public" value="1"> This project is public
+					</label>
+				</div>
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
 						<button type="submit" name="add_list" class="btn btn-default pull-right">aanmaken</button>

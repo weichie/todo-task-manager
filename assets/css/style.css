@@ -491,8 +491,39 @@ header .logs ul li:nth-child(2) {
   padding: 50px;
 }
 
-.single-list {
-  border: 1px solid blue;
+.single-list ul {
+  padding: 0;
+  width: 100%;
+}
+.single-list ul li {
+  justify-content: space-between;
+  padding: 10px 25px;
+}
+.single-list ul li strong {
+  color: #333;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+.single-list ul li label {
+  padding: 5px 10px;
+  margin-left: 10px;
+  text-transform: uppercase;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+.single-list ul li span {
+  display: block;
+  color: #8c98a8;
+  font-weight: 300;
+}
+.single-list ul li:hover {
+  background: #f2f3f5;
+}
+.single-list .checker {
+  padding-top: 15px;
 }
 
 /* FOOTER 

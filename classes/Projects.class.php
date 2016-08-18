@@ -6,8 +6,8 @@
 			$this->db = $db;
 		}
 
-		public function new_list($title, $beschrijving){
-			$query = "INSERT INTO projecten(title, beschrijving) VALUES ('".$this->db->real_escape_string($title)."','".$this->db->real_escape_string($beschrijving)."');";
+		public function new_list($title, $beschrijving, $creator, $public){
+			$query = "INSERT INTO projecten(title, beschrijving, creator, public) VALUES ('".$this->db->real_escape_string($title)."','".$this->db->real_escape_string($beschrijving)."','".$_SESSION['username']."','".$this->db->real_escape_string($public)."');";
 
 			//bestaat de lijst al?
 			$controle = "SELECT title FROM projecten WHERE title='".$this->db->real_escape_string($title)."'";
