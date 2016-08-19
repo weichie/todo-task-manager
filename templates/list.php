@@ -25,7 +25,7 @@
 				</p>
 			</div><!-- ./single-task -->
 			<div class="checker">
-				<input type="checkbox" class="isDone" data-id="<?php echo $task['id']; ?>">
+				<input type="checkbox" class="isDone" data-id="<?php echo $task['taakid']; ?>">
 			</div>
 		</li>
 	<?php endforeach; ?>

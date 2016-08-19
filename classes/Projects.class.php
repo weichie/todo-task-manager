@@ -25,6 +25,22 @@
 			}
 		}
 		
+		public function getAllLists(){
+			$query = $this->db->query('SELECT * FROM projecten');
+
+			if($query->num_rows > 0){
+				$lists = array();
+
+				while($l = $query->fetch_assoc()){
+					$lists[] = $l;
+				}
+
+				return $lists;
+			}else{
+				return array();
+			}
+		}
+
 		public function getLists(){
 			/* $query = $this->db->query('SELECT * FROM projecten'); */
 			$query = $this->db->query('SELECT *, projecten.id as pid, projecten.title as ptit FROM projecten INNER JOIN users on projecten.creator = users.username WHERE users.id="'.$_SESSION['userID'].'"');

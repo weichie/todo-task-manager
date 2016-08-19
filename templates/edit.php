@@ -50,7 +50,7 @@
 				<h2>Projecten</h2>
 				<ul class="remove-list">
 				<?php 
-					$lists = $projects->getLists();
+					$lists = $projects->getAllLists();
 					foreach($lists as $list):
 				?>
 					<li>

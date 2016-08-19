@@ -46,7 +46,7 @@
 		}
 		public function getTasks(){
 			/* $query = $this->db->query('SELECT * FROM taken WHERE done="0" ORDER BY deadline asc'); */
-			$query = $this->db->query('SELECT *, taken.title as ttitle FROM taken INNER JOIN users ON taken.created_by = users.username WHERE done="0" ORDER BY deadline asc');
+			$query = $this->db->query('SELECT *, taken.id as taakid, taken.title as ttitle FROM taken INNER JOIN users ON taken.created_by = users.username WHERE done="0" ORDER BY deadline asc');
 			if($query->num_rows > 0){
 				$tasks = array();
 
