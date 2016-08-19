@@ -10,4 +10,4 @@ Using:
  - Added success or error messages
  - errors are catched with 'try-catch' structures
 
-![alt tag](https://raw.githubusercontent.com/weichie/todo-task-manager/example-trans.png)
+![alt tag](https://github.com/weichie/todo-task-manager/blob/master/example-trans.png)
