@@ -9,3 +9,5 @@ Using:
  - There were no php frameworks used
  - Added success or error messages
  - errors are catched with 'try-catch' structures
+
+![alt tag](https://raw.githubusercontent.com/weichie/todo-task-manager/example-trans.png)

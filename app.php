@@ -15,5 +15,4 @@ $taken = new Taken($db);
 $comments = new Comments($db);
 $volgend = new Volgend($db);
 
-//$app = new User($db);
 ?>
